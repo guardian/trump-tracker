@@ -15,35 +15,33 @@ var specs =  {
     'modified': process.argv.slice(2)[3] ? process.argv.slice(2)[3] : 'none'
 };
 
-function generatePlaylist(playlist, build) {
-    var path = '.build/' + playlist.name;
-    var version = 'v/' + Date.now();
-    var assetPath = playlist.name === 'local' ? 'http://localhost:' + config.local.port : config.remote.url + '/' + config.remote.path + '/' + playlist.name + '/' + version;
+var path = '.build/';
+var version = 'v/' + Date.now();
+var assetPath = specs.deploy === false ? 'http://localhost:' + config.local.port : config.remote.url + '/' + config.remote.path + '/' + version;
 
-    fs.mkdirsSync(path);
+fs.mkdirsSync(path);
 
-    if (specs.modified === 'html') {
-        assets.html(path, assetPath);
-    } else if (specs.modified === 'js') {
-        assets.js(path, 'main');
-    } else if (specs.modified === 'css') {
-        assets.css(path, assetPath);
-    } else {
-        assets.html(path, assetPath);
-        assets.css(path, assetPath);
-        assets.js(path, 'main');
-    }
+if (specs.modified === 'html') {
+    assets.html(path, assetPath);
+} else if (specs.modified === 'js') {
+    assets.js(path, 'main');
+} else if (specs.modified === 'css') {
+    assets.css(path, assetPath);
+} else {
+    assets.html(path, assetPath);
+    assets.css(path, assetPath);
+    assets.js(path, 'main');
+}
 
-    if (playlist.name === 'local' || specs.deploy) {
-        assets.preview(path, specs.deploy, assetPath);
-    }
+if (specs.deploy === false) {
+    assets.preview(path, specs.deploy, assetPath);
+}
 
-    fs.copySync('src/assets', path + '/assets');
+fs.copySync('src/assets', path + '/assets');
 
-    if (specs.deploy) {
-        fs.emptyDirSync('.deploy');
-        fs.copySync(path, '.deploy/' + version);
-        fs.writeFileSync('.deploy/' + build, version);
-        deploy(playlist.name);
-    }
+if (specs.deploy) {
+    fs.emptyDirSync('.deploy');
+    fs.copySync(path, '.deploy/' + version);
+    fs.writeFileSync('.deploy/' + build, version);
+    deploy(playlist.name);
 }

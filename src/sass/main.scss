@@ -13,9 +13,8 @@ $mq-breakpoints: (
 
 // colours
 $c-blue: #1e3f74;
-$c-light-blue: #4bc6df;
-$c-yellow: #ffbb00;
-$c-orange: #e6711b;
+$c-red: #b51800;
+$c-light-blue: #aad8f1;
 
 // non-colours
 $c-white: #ffffff;
@@ -35,3 +34,4 @@ $c-ad-grey: #f6f6f6;
 @import "partials/page";
 
 @import "partials/base";
+@import "partials/header";

@@ -21,7 +21,7 @@ watch('src', function(file) {
     }
 });
 
-var file = new static.Server('./.build/local', {
+var file = new static.Server('./.build', {
     'cache': 0,
     'headers': {
         'Access-Control-Allow-Origin': '*'

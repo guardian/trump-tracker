@@ -5,7 +5,7 @@
     },
     "remote": {
         "url": "https://interactive.guim.co.uk",
-        "path": "atoms/playlists",
+        "path": "atoms/2017/01",
         "bucket": "gdn-cdn"
     }
 }

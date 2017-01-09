@@ -1,0 +1,44 @@
+.trump-tracker-header {
+    background-color: $c-blue;
+
+    .gs-container {
+        background-image: url('@@assetPath@@/assets/images/trump.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10px 10px;
+
+        @include mq(mobileLandscape) {
+            padding: 10px 20px;
+        }
+
+        @include mq(tablet) {
+            height: 540px;
+        }
+    }
+}
+
+.trump-tracker-header__standfirst {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: 800;
+    color: $c-light-blue;
+
+    @include mq(tablet) {
+        max-width: 460px;
+    }
+
+    span {
+        display: none;
+    }
+}
+
+.trump-tracker-header__logo {
+    position: absolute;
+
+    @include mq(wide) {
+        bottom: 16px;
+        left: 500px;
+    }
+}
