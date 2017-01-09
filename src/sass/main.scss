@@ -20,7 +20,7 @@ $c-light-blue: #aad8f1;
 $c-white: #ffffff;
 $c-off-white: #f1f1f1;
 $c-grey: #dfdfdf;
-$c-dark-grey: #666666;
+$c-dark-grey: #999;
 $c-black: #333333;
 
 // social
@@ -35,3 +35,5 @@ $c-ad-grey: #f6f6f6;
 
 @import "partials/base";
 @import "partials/header";
+@import "partials/stats";
+@import "partials/days";

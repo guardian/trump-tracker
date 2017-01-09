@@ -1,3 +1,3 @@
-var tracker = require('./modules/tracker.js');
+var injectHtml = require('./modules/injectHtml.js');
 
-tracker.init();
+injectHtml.init();

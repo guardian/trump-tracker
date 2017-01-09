@@ -2,6 +2,7 @@ var fs = require('fs-extra');
 var handlebars = require('handlebars');
 var partialLoader = require('partials-loader');
 var browserify = require('browserify');
+var stringify = require('stringify');
 var sass = require('node-sass');
 var deasync = require('deasync');
 
@@ -11,7 +12,9 @@ module.exports = {
 
         var isDone = false;
 
-        browserify('./src/js/' + fileName + '.js').bundle(function(err, buf) {
+        browserify('./src/js/' + fileName + '.js').transform(stringify, {
+            appliesTo: { includeExtensions: ['.hjs', '.html', '.whatever'] }
+        }).bundle(function(err, buf) {
             if (err) {
                 console.log(err);
             }

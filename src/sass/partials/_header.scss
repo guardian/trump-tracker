@@ -7,13 +7,14 @@
         background-repeat: no-repeat;
         background-size: cover;
         padding: 10px 10px;
+        box-sizing: border-box;
 
         @include mq(mobileLandscape) {
             padding: 10px 20px;
         }
 
         @include mq(tablet) {
-            height: 540px;
+            height: 560px;
         }
     }
 }

@@ -1,0 +1,53 @@
+.trump-tracker__days {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.trump-tracker__day {
+    max-width: 620px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    border: 1px solid $c-red;
+    padding: 3px 10px;
+}
+
+.trump-tracker__day-headline {
+    color: $c-blue;
+}
+
+.trump-tracker__day-iframe {
+    width: 100%;
+    border: 0;
+}
+
+.trump-tracker__day-share {
+    margin-top: 12px;
+}
+
+.trump-tracker__day-share-button {
+    display: inline-block;
+    margin-right: 2px;
+    height: 24px;
+    width: 24px;
+    border: 1px solid $c-grey;
+    border-radius: 12px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.trump-tracker__day-share-button--facebook {
+    background-image: url('@@assetPath@@/assets/images/facebook.svg');
+    border-color: $c-facebook;
+}
+
+.trump-tracker__day-share-button--twitter {
+    background-image: url('@@assetPath@@/assets/images/twitter.svg');
+    border-color: $c-twitter;
+}
+
+.trump-tracker__day-share-button--email {
+    background-image: url('@@assetPath@@/assets/images/email.svg');
+    border-color: $c-dark-grey;
+}

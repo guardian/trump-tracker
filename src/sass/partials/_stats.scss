@@ -1,0 +1,8 @@
+.trump-tracker__stats {
+    width: 460px;
+
+    @include mq(leftCol) {
+        position: absolute;
+        left: -480px;
+    }
+}
