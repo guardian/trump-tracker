@@ -1,0 +1,37 @@
+@import "../../node_modules/sass-mq/mq";
+
+// Default breakpoints from Frontend
+$mq-breakpoints: (
+    mobile:          320px,
+    mobileLandscape: 480px,
+    phablet:         660px,
+    tablet:          740px,
+    desktop:         980px,
+    leftCol:         1140px,
+    wide:            1300px
+);
+
+// colours
+$c-blue: #1e3f74;
+$c-light-blue: #4bc6df;
+$c-yellow: #ffbb00;
+$c-orange: #e6711b;
+
+// non-colours
+$c-white: #ffffff;
+$c-off-white: #f1f1f1;
+$c-grey: #dfdfdf;
+$c-dark-grey: #666666;
+$c-black: #333333;
+
+// social
+$c-twitter: #4bc6df;
+$c-facebook: #3067a3;
+
+// other
+$c-ad-grey: #f6f6f6;
+
+@import "partials/fonts";
+@import "partials/page";
+
+@import "partials/base";
