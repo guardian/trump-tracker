@@ -1,4 +1,5 @@
 var $ = require('../vendor/jquery.js');
+var share = require('../modules/share.js');
 var handlebars = require('handlebars');
 var dayHtml = require('../templates/days.html');
 var statsHtml = require('../templates/stats.html');
@@ -49,6 +50,8 @@ module.exports =  {
         var compiledHtml = dayTemplate({days : data.days.reverse()});
 
         $('.trump-tracker__days').html(compiledHtml);
+
+        share.setDayLinks();
     },
 
     addStats: function() {
