@@ -6,6 +6,7 @@
 .trump-tracker__mainCol {
     position: relative;
     padding: 0 10px;
+    max-width: 620px;
 
     @include mq(mobileLandscape) {
         padding: 0 20px;
@@ -18,5 +19,29 @@
 
     @include mq(leftCol) {
         margin-left: 500px;
+    }
+
+    &:before {
+        @include mq(desktop) {
+            content: '';
+            position: absolute;
+            left: -11px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: $c-grey;
+        }
+    }
+
+    &:after {
+        @include mq(wide) {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: $c-grey;
+        }
     }
 }
