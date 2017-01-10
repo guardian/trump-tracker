@@ -8,10 +8,11 @@
         background-size: cover;
         padding: 10px 10px;
         box-sizing: border-box;
-        height: 300px;
+        height: 400px;
 
         @include mq(mobileLandscape) {
             padding: 10px 20px;
+            height: 300px;
         }
 
         @include mq(tablet) {
@@ -45,7 +46,7 @@
 
 .trump-tracker-header__logo {
     position: absolute;
-    width: 60%;
+    width: calc(100% - 20px);
     bottom: 12px;
     right: 10px;
 
@@ -72,9 +73,11 @@
     position: absolute;
     left: 10px;
     bottom: 12px;
+    display: none;
 
     @include mq(mobileLandscape) {
         left: 20px;
+        display: block;
     }
 }
 
