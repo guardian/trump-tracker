@@ -8,26 +8,34 @@
         background-size: cover;
         padding: 10px 10px;
         box-sizing: border-box;
+        height: 300px;
 
         @include mq(mobileLandscape) {
             padding: 10px 20px;
         }
 
         @include mq(tablet) {
+            height: 440px;
+        }
+
+        @include mq(desktop) {
             height: 560px;
         }
     }
 }
 
 .trump-tracker-header__standfirst {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 20px;
     font-family: 'Guardian Egyptian Web';
     font-weight: 800;
     color: $c-light-blue;
+    max-width: 350px;
 
     @include mq(tablet) {
         max-width: 460px;
+        font-size: 24px;
+        line-height: 28px;
     }
 
     span {
@@ -37,6 +45,22 @@
 
 .trump-tracker-header__logo {
     position: absolute;
+    width: 60%;
+    bottom: 12px;
+    right: 10px;
+
+    @include mq(mobileLandscape) {
+        width: 320px;
+        right: 20px;
+    }
+
+    @include mq(tablet) {
+        width: 440px;
+    }
+
+    @include mq(desktop) {
+        width: 620px;
+    }
 
     @include mq(wide) {
         bottom: 16px;
@@ -46,8 +70,12 @@
 
 .trump-tracker-header__share-panel {
     position: absolute;
-    left: 20px;
+    left: 10px;
     bottom: 12px;
+
+    @include mq(mobileLandscape) {
+        left: 20px;
+    }
 }
 
 .trump-tracker-header__share-link {
