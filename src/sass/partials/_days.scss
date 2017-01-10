@@ -22,13 +22,34 @@
     margin: 4px -11px;
 }
 
+.trump-tracker__day-copy {
+    margin-bottom: 12px;
+}
+
 .trump-tracker__day-iframe {
     width: 100%;
     border: 0;
 }
 
 .trump-tracker__day-share {
-    margin-top: 12px;
+    float: right;
+}
+
+.trump-tracker__day-links {
+    overflow: auto;
+}
+
+.trump-tracker__day-link {
+    display: inline-block;
+    height: 24px;
+    border: 1px solid $c-blue;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 8px;
+    font-family: 'Guardian Sans Web';
+    color: $c-blue;
+    float: left;
 }
 
 .trump-tracker__day-share-button {

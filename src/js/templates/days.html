@@ -20,10 +20,14 @@
             {{{ media }}}
         {{/if_eq}}
 
-        <div class='trump-tracker__day-share'>
-            <a href='#day-{{ day }}' class='trump-tracker__day-share-button trump-tracker__day-share-button--facebook'></a>
-            <a href='#day-{{ day }}' class='trump-tracker__day-share-button trump-tracker__day-share-button--twitter'></a>
-            <a href='#day-{{ day }}' class='trump-tracker__day-share-button trump-tracker__day-share-button--email'></a>
+        <div class='trump-tracker__day-links'>
+            <a href='{{ link }}' class='trump-tracker__day-link'>Read full report</a>
+
+            <div class='trump-tracker__day-share'>
+                <a href='#day-{{ day }}' class='trump-tracker__day-share-button trump-tracker__day-share-button--facebook'></a>
+                <a href='#day-{{ day }}' class='trump-tracker__day-share-button trump-tracker__day-share-button--twitter'></a>
+                <a href='#day-{{ day }}' class='trump-tracker__day-share-button trump-tracker__day-share-button--email'></a>
+            </div>
         </div>
     </li>
     {{/if}}
