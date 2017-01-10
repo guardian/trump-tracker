@@ -52,6 +52,7 @@ module.exports =  {
         $('.trump-tracker__days').html(compiledHtml);
 
         share.setDayLinks();
+        $('.trump-tracker__loading').addClass('has-loaded');
     },
 
     addStats: function() {

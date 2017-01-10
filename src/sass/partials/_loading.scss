@@ -1,0 +1,35 @@
+.trump-tracker__loading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+
+    &.has-loaded {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.trump-tracker__loading-messages {
+    list-style: none;
+    margin: 0;
+}
+
+.trump-tracker__loading-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    opacity: 0;
+
+    &:first-of-type {
+        opacity: 1;
+    }
+}
