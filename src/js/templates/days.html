@@ -4,9 +4,7 @@
         <h2 class='trump-tracker__day-headline'>Day {{ day }}</h2>
 
         {{#if_eq type 'image'}}
-            <div class='trump-tracker__day-image' data-asset-type='image' {{{getImageAttr media}}}>
-                {{{getImage media}}}
-            </div>
+            {{{getImage media}}}
         {{/if_eq}}
 
         <div class='trump-tracker__day-copy'>{{ copy }}</div>

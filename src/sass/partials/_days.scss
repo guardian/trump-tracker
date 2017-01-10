@@ -16,6 +16,12 @@
     color: $c-blue;
 }
 
+.trump-tracker__day-image {
+    width: calc(100% + 22px);
+    height: auto;
+    margin: 4px -11px;
+}
+
 .trump-tracker__day-iframe {
     width: 100%;
     border: 0;

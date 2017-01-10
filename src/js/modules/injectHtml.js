@@ -19,17 +19,6 @@ module.exports =  {
                 return opts.inverse(this);
         });
 
-        handlebars.registerHelper('getImageAttr', function(url) {
-            //https://media.guim.co.uk/486fc1899aa85cf048fc1a2fe031f4862d2c4bc5/1176_1972_2262_1358 cropRatio=2262,1358&size=140,500,1000,2000,2262
-            var dataUrl = url.split(' ')[0];
-            var dataRatio = url.split('cropRatio=')[1].split('&size')[0];
-            var dataRatioSizes = dataRatio.split(',');
-                dataRatio = Number(dataRatioSizes[1]) / Number(dataRatioSizes[0]);
-            var dataSizes = url.split('&size=')[1];
-
-            return 'data-url="' + dataUrl + '" data-image-ratio="' + dataRatio + '" data-image-sizes="' + dataSizes + '"';
-        });
-
         handlebars.registerHelper('getImage', function(url) {
             var dataUrl = url.split(' ')[0];
             var dataRatioRaw = url.split('cropRatio=')[1].split('&size')[0];
@@ -44,7 +33,7 @@ module.exports =  {
     },
 
     getJson: function() {
-        $.getJSON('https://interactive.guim.co.uk/docsdata-test/1TTV-g36nUE8uxVb882sC2lCeR8Yt8SGjIbJtN12yF0E.json', function(response) {
+        $.getJSON('https://interactive.guim.co.uk/docsdata/1TTV-g36nUE8uxVb882sC2lCeR8Yt8SGjIbJtN12yF0E.json', function(response) {
             data = response.sheets;
             this.injectHtml();
         }.bind(this));
