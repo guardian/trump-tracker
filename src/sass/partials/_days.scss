@@ -45,11 +45,15 @@
     border: 1px solid $c-blue;
     border-radius: 12px;
     font-size: 14px;
-    line-height: 1.8;
-    padding: 0 8px;
+    line-height: 1.9;
+    padding: 0 32px 0 8px;
     font-family: 'Guardian Sans Web';
     color: $c-blue;
     float: left;
+    background-image: url('@@assetPath@@/assets/images/arrow-right.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 24px;
 }
 
 .trump-tracker__day-share-button {
