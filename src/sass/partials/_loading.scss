@@ -15,9 +15,32 @@
     }
 }
 
+.trump-tracker__loading-gif {
+    margin: 0 auto;
+}
+
 .trump-tracker__loading-messages {
     list-style: none;
     margin: 0;
+    position: relative;
+}
+
+$length-of-animation: 6s;
+$number-of-messages: 3;
+
+@keyframes message {
+    0% {
+        opacity: 1;
+    }
+    #{(100% / $number-of-messages)} {
+        opacity: 1;
+    }
+    #{(100% / $number-of-messages + 1%)} {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .trump-tracker__loading-message {
@@ -28,8 +51,11 @@
     margin: auto;
     text-align: center;
     opacity: 0;
+    animation: message $length-of-animation linear infinite;
+}
 
-    &:first-of-type {
-        opacity: 1;
+@for $i from 1 through $number-of-messages {
+    .trump-tracker__loading-message--#{$i} {
+        animation-delay: ($length-of-animation / $number-of-messages) * $i + 0s;
     }
 }
