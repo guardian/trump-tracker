@@ -56,6 +56,6 @@ $number-of-messages: 3;
 
 @for $i from 1 through $number-of-messages {
     .trump-tracker__loading-message--#{$i} {
-        animation-delay: ($length-of-animation / $number-of-messages) * $i + 0s;
+        animation-delay: -($length-of-animation / $number-of-messages) * $i + 0s;
     }
 }
