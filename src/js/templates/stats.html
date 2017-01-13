@@ -1,41 +1,40 @@
-<div class='trump-tracker__stats-inner'>
-    <ul class='trump-tracker__data-points'>
-        <li class='trump-tracker__data-point trump-tracker__data-point--insulted'>
-            <h1 class='trump-tracker__data-title'>People, places and things recently insulted</h1>
-            <ul class='trump-tracker__data-insulted-list'>
-                <li class='trump-tracker__data-insulted'>
-                    {{{ getImage insulted1Image }}}
-                    <span class='trump-tracker__data-insulted-label'>{{ insulted1 }}
-                </li>
-                <li class='trump-tracker__data-insulted'>
-                    {{{ getImage insulted2Image }}}
-                    <span class='trump-tracker__data-insulted-label'>{{ insulted2 }}
-                </li>
-                <li class='trump-tracker__data-insulted'>
-                    {{{ getImage insulted3Image }}}
-                    <span class='trump-tracker__data-insulted-label'>{{ insulted3 }}
-                </li>
-            </ul>
-        </li>
+<ul class='trump-tracker__data-points'>
+    <li class='trump-tracker__data-point trump-tracker__data-point--insulted'>
+        <h1 class='trump-tracker__data-title'>People, places and things<br /> recently insulted</h1>
+        <ul class='trump-tracker__data-insulted-list'>
+            <li class='trump-tracker__data-insulted'>
+                {{{ getImage insulted1Image }}}
+                <span class='trump-tracker__data-insulted-label'>{{ insulted1 }}
+            </li>
+            <li class='trump-tracker__data-insulted'>
+                {{{ getImage insulted2Image }}}
+                <span class='trump-tracker__data-insulted-label'>{{ insulted2 }}
+            </li>
+            <li class='trump-tracker__data-insulted'>
+                {{{ getImage insulted3Image }}}
+                <span class='trump-tracker__data-insulted-label'>{{ insulted3 }}
+            </li>
+        </ul>
+    </li>
 
-        <li class='trump-tracker__data-point trump-tracker__data-point--obama'>
-            <h1 class='trump-tracker__data-title'>Obama actions unpicked</h1>
-            <h2 class='trump-tracker__data-number'>{{ obamaActions }}</h2>
-        </li>
+    <li class='trump-tracker__data-point trump-tracker__data-point--obama'>
+        <h1 class='trump-tracker__data-title'>Obama actions unpicked</h1>
+        <h2 class='trump-tracker__data-number'>{{ obamaActions }}</h2>
+        <img class='trump-tracker__data-sad-obama' src='{{ assetPath }}/assets/images/sad-obama.png' />
+    </li>
 
-        <li class='trump-tracker__data-point trump-tracker__data-point--white-house'>
-            <h1 class='trump-tracker__data-title'>Nights spent at White House</h1>
-            <h2 class='trump-tracker__data-number'>{{ nightsAtWhiteHouse }} out of {{ totalNights }}</h2>
-        </li>
+    <li class='trump-tracker__data-point trump-tracker__data-point--white-house'>
+        <h1 class='trump-tracker__data-title'>Nights spent at White House</h1>
+        <h2 class='trump-tracker__data-number'>{{ nightsAtWhiteHouse }} <sub>out of {{ totalNights }}</sub></h2>
+    </li>
 
-        <li class='trump-tracker__data-point trump-tracker__data-point--tweets'>
-            <h1 class='trump-tracker__data-title'>Number of tweets made</h1>
-            <h2 class='trump-tracker__data-number'>{{ numberOfTweets }}</h2>
-        </li>
+    <li class='trump-tracker__data-point trump-tracker__data-point--tweets'>
+        <h1 class='trump-tracker__data-title'>Number of tweets made</h1>
+        <h2 class='trump-tracker__data-number'>{{ numberOfTweets }}</h2>
+    </li>
 
-        <li class='trump-tracker__data-point trump-tracker__data-point--wall'>
-            <h1 class='trump-tracker__data-title'>Meters of the wall built</h1>
-            <h2 class='trump-tracker__data-number'>{{ metersOfWall }}</h2>
-        </li>
-    </ul>
-</div>
+    <li class='trump-tracker__data-point trump-tracker__data-point--wall'>
+        <h1 class='trump-tracker__data-title'>Meters of the wall built</h1>
+        <h2 class='trump-tracker__data-number'>{{ metersOfWall }}</h2>
+    </li>
+</ul>

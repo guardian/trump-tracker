@@ -23,13 +23,13 @@ fs.mkdirsSync(path);
 if (specs.modified === 'html') {
     assets.html(path, assetPath);
 } else if (specs.modified === 'js') {
-    assets.js(path, 'main');
+    assets.js(path, 'main', assetPath);
 } else if (specs.modified === 'css') {
     assets.css(path, assetPath);
 } else {
     assets.html(path, assetPath);
     assets.css(path, assetPath);
-    assets.js(path, 'main');
+    assets.js(path, 'main', assetPath);
 }
 
 if (specs.deploy === false) {

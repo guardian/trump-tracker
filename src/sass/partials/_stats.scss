@@ -1,13 +1,13 @@
 .trump-tracker__stats {
     background-color: $c-blue;
     color: $c-white;
-    height: 220px;
 }
 
 .trump-tracker__data-points {
     list-style: none;
     margin: 0;
     padding: 6px 10px;
+    overflow: hidden;
 
     @include mq(mobileLandscape) {
         padding: 10px 20px;
@@ -19,15 +19,22 @@
     padding-right: 9px;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
     margin-right: 10px;
+    height: 200px;
+    position: relative;
 }
 
-.trump-tracker__data-point--obama,
-.trump-tracker__data-point--wall {
-    width: 120px;
+.trump-tracker__data-point--obama {
+    width: 140px;
+
+    .trump-tracker__data-sad-obama {
+        position: absolute;
+        bottom: -12px;
+        right: -6px;
+    }
 }
 
 .trump-tracker__data-point--white-house {
-    width: 180px;
+    width: 220px;
 }
 
 .trump-tracker__data-point--tweets {
@@ -38,23 +45,44 @@
     width: 380px;
 }
 
+.trump-tracker__data-point--wall {
+    width: 140px;
+    padding-right: 0;
+    border-right: 0;
+    margin-right: 0;
+}
+
 .trump-tracker__data-title {
     font-size: 16px;
     line-height: 1.2;
 
     @include mq(tablet) {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
 .trump-tracker__data-number {
     font-size: 64px;
+    line-height: 1.1;
+
+    sub {
+        font-size: 16px;
+        bottom: 0;
+
+        @include mq(tablet) {
+            font-size: 20px;
+            left: -6px;
+        }
+    }
 }
 
 .trump-tracker__data-insulted-list {
     list-style: none;
     margin: 0;
     padding: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .trump-tracker__data-insulted {

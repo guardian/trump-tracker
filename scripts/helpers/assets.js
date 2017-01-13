@@ -7,7 +7,7 @@ var sass = require('node-sass');
 var deasync = require('deasync');
 
 module.exports = {
-    js: function(path, fileName) {
+    js: function(path, fileName, absolutePath) {
         fs.removeSync(path + '/' + fileName + '.js');
 
         var isDone = false;
@@ -18,7 +18,7 @@ module.exports = {
             if (err) {
                 console.log(err);
             }
-            fs.writeFileSync(path + '/' + fileName + '.js', buf.toString());
+            fs.writeFileSync(path + '/' + fileName + '.js', buf.toString().replace(/@@assetPath@@/g, absolutePath));
             isDone = true;
             console.log('updated js!');
         });

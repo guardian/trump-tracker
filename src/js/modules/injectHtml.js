@@ -31,6 +31,10 @@ module.exports =  {
 
             return '<img class="trump-tracker__day-image" src="' + basePath + '/500.jpg"/>'
         });
+
+        handlebars.registerHelper('assetPath', function() {
+            return '@@assetPath@@'
+        });
     },
 
     getJson: function() {
@@ -66,7 +70,6 @@ module.exports =  {
         var furniture = {}
 
         for (var i = 0; i < data.length; i++) {
-            console.log(data[i]);
             furniture[data[i].option] = data[i].value
         }
 
