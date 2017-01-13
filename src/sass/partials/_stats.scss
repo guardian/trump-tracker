@@ -1,5 +1,80 @@
 .trump-tracker__stats {
     background-color: $c-blue;
     color: $c-white;
-    height: 180px;
+    height: 220px;
+}
+
+.trump-tracker__data-points {
+    list-style: none;
+    margin: 0;
+    padding: 6px 10px;
+
+    @include mq(mobileLandscape) {
+        padding: 10px 20px;
+    }
+}
+
+.trump-tracker__data-point {
+    float: left;
+    padding-right: 9px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    margin-right: 10px;
+}
+
+.trump-tracker__data-point--obama,
+.trump-tracker__data-point--wall {
+    width: 120px;
+}
+
+.trump-tracker__data-point--white-house {
+    width: 180px;
+}
+
+.trump-tracker__data-point--tweets {
+    width: 300px;
+}
+
+.trump-tracker__data-point--insulted {
+    width: 380px;
+}
+
+.trump-tracker__data-title {
+    font-size: 16px;
+    line-height: 1.2;
+
+    @include mq(tablet) {
+        font-size: 24px;
+    }
+}
+
+.trump-tracker__data-number {
+    font-size: 64px;
+}
+
+.trump-tracker__data-insulted-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.trump-tracker__data-insulted {
+    width: 100px;
+    margin-right: 20px;
+    float: left;
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        margin: 0;
+        margin-bottom: 3px;
+    }
+}
+
+.trump-tracker__data-insulted-label {
+    text-align: center;
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    width: 100px;
+    display: block;
 }
