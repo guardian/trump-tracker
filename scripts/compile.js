@@ -10,9 +10,8 @@ var screenshot = require('../scripts/helpers/screenshot.js');
 
 var specs =  {
     'deploy': process.argv.slice(2)[0] == 'true' ? true : false,
-    'content': process.argv.slice(2)[1],
-    'build': process.argv.slice(2)[2] ? process.argv.slice(2)[2] : 'preview',
-    'modified': process.argv.slice(2)[3] ? process.argv.slice(2)[3] : 'none'
+    'build': process.argv.slice(2)[1] ? process.argv.slice(2)[1] : 'preview',
+    'modified': process.argv.slice(2)[2] ? process.argv.slice(2)[2] : 'none'
 };
 
 var path = '.build/';
@@ -42,6 +41,6 @@ fs.copySync('src/assets', path + '/assets');
 if (specs.deploy) {
     fs.emptyDirSync('.deploy');
     fs.copySync(path, '.deploy/' + version);
-    fs.writeFileSync('.deploy/' + build, version);
-    deploy(playlist.name);
+    fs.writeFileSync('.deploy/' + specs.build, version);
+    deploy();
 }

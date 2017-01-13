@@ -3,6 +3,15 @@ figure.element-atom {
     margin-bottom: 0;
 }
 
+// this fixes margin issues on apps
+figure.element-atom,
+figure.interactive-atom {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+
 .is-immersive-interactive .l-footer {
     display: block !important;
 }

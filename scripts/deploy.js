@@ -1,4 +1,4 @@
-module.exports = function deploy(target) {
+module.exports = function deploy() {
     var thingsToUpload = [
         {
             files: '**/*',
@@ -83,7 +83,7 @@ module.exports = function deploy(target) {
         var options = {
             Bucket: BUCKET,
             ACL: 'public-read',
-            Key: config.remote.path + '/' + target + '/' + item.file,
+            Key: config.remote.path + '/' + item.file,
             Body: data,
             ContentType: mime.lookup( item.file )
         };
