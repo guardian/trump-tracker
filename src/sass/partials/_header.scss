@@ -1,5 +1,5 @@
 .trump-tracker-header {
-    background-color: $c-blue;
+    background-color: darken($c-blue, 10%);
 
     .gs-container {
         background-image: url('@@assetPath@@/assets/images/trump.jpg');

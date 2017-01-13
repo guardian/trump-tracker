@@ -34,7 +34,7 @@ module.exports =  {
     },
 
     getJson: function() {
-        $.getJSON('https://interactive.guim.co.uk/docsdata/1TTV-g36nUE8uxVb882sC2lCeR8Yt8SGjIbJtN12yF0E.json', function(response) {
+        $.getJSON('https://interactive.guim.co.uk/docsdata-test/1TTV-g36nUE8uxVb882sC2lCeR8Yt8SGjIbJtN12yF0E.json', function(response) {
             data = response.sheets;
             this.injectHtml();
         }.bind(this));
@@ -57,8 +57,19 @@ module.exports =  {
 
     addStats: function() {
         var statsTemplate = handlebars.compile(statsHtml);
-        var compiledHtml = statsTemplate({stats: data.data});
+        var compiledHtml = statsTemplate(this.sortData(data.data));
 
-        $('.trump-tracker__stats').html(compiledHtml);
+        $('.trump-tracker__stats .gs-container').html(compiledHtml);
     },
+
+    sortData: function(data) {
+        var furniture = {}
+
+        for (var i = 0; i < data.length; i++) {
+            console.log(data[i]);
+            furniture[data[i].option] = data[i].value
+        }
+
+        return furniture;
+    }
 };
