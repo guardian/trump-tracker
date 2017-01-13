@@ -28,17 +28,29 @@
 
     .trump-tracker__data-sad-obama {
         position: absolute;
-        bottom: -12px;
-        right: -6px;
+        bottom: -10px;
+        right: -14px;
     }
 }
 
 .trump-tracker__data-point--white-house {
     width: 220px;
+
+    .trump-tracker__data-white-house {
+        position: absolute;
+        bottom: -10px;
+        right: -20px;
+    }
 }
 
 .trump-tracker__data-point--tweets {
     width: 300px;
+
+    .trump-tracker__data-phone {
+        position: absolute;
+        bottom: -10px;
+        right: 10px;
+    }
 }
 
 .trump-tracker__data-point--insulted {
@@ -50,6 +62,12 @@
     padding-right: 0;
     border-right: 0;
     margin-right: 0;
+
+    .trump-tracker__data-wall {
+        position: absolute;
+        bottom: -10px;
+        right: -20px;
+    }
 }
 
 .trump-tracker__data-title {
