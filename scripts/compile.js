@@ -24,12 +24,14 @@ if (specs.modified === 'html') {
     assets.html(path, assetPath);
 } else if (specs.modified === 'js') {
     assets.js(path, 'main', assetPath);
+    assets.js(path, 'app', assetPath);
 } else if (specs.modified === 'css') {
     assets.css(path, assetPath);
 } else {
     assets.html(path, assetPath);
     assets.css(path, assetPath);
     assets.js(path, 'main', assetPath);
+    assets.js(path, 'app', assetPath);
 }
 
 if (specs.deploy === false) {
