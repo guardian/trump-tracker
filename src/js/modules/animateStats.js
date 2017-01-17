@@ -20,7 +20,6 @@ module.exports =  {
 
     animateNumber: function(id) {
         var number = $('#' + id).text();
-        console.log(id);
         var countNumber = new CountUp(id, 0, number, 0, 3, options);
         countNumber.start();
     }
