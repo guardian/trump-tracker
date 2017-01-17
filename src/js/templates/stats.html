@@ -19,25 +19,25 @@
 
     <li class='trump-tracker__data-point trump-tracker__data-point--obama'>
         <h1 class='trump-tracker__data-title'>Obama actions unpicked</h1>
-        <h2 class='trump-tracker__data-number'>{{ obamaActions }}</h2>
+        <h2 class='trump-tracker__data-number' id='trump-obama'>{{ obamaActions }}</h2>
         <img class='trump-tracker__data-sad-obama' src='{{ assetPath }}/assets/images/sad-obama.png' />
     </li>
 
     <li class='trump-tracker__data-point trump-tracker__data-point--white-house'>
         <h1 class='trump-tracker__data-title'>Nights spent at White&nbsp;House</h1>
-        <h2 class='trump-tracker__data-number'>{{ nightsAtWhiteHouse }} <sub>out of {{ totalNights }}</sub></h2>
+        <h2 class='trump-tracker__data-number'><span id='trump-white-house'>{{ nightsAtWhiteHouse }}</span> <sub>out of {{ totalNights }}</sub></h2>
         <img class='trump-tracker__data-white-house' src='{{ assetPath }}/assets/images/white-house.png' />
     </li>
 
     <li class='trump-tracker__data-point trump-tracker__data-point--tweets'>
         <h1 class='trump-tracker__data-title'>Number of tweets made <span>@realDonaldTrump & @POTUS</span></h1>
-        <h2 class='trump-tracker__data-number'>{{ numberOfTweets }}</h2>
+        <h2 class='trump-tracker__data-number' id='trump-tweets'>{{ numberOfTweets }}</h2>
         <img class='trump-tracker__data-phone' src='{{ assetPath }}/assets/images/iphone.png' />
     </li>
 
     <li class='trump-tracker__data-point trump-tracker__data-point--wall'>
         <h1 class='trump-tracker__data-title'>Meters of the wall built</h1>
-        <h2 class='trump-tracker__data-number'>{{ metersOfWall }}</h2>
+        <h2 class='trump-tracker__data-number' id='trump-wall'>{{ metersOfWall }}</h2>
         <img class='trump-tracker__data-wall' src='{{ assetPath }}/assets/images/sneaky-trump.png' />
     </li>
 </ul>

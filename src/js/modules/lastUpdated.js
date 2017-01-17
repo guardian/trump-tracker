@@ -2,7 +2,6 @@ var $ = require('../vendor/jquery.js');
 
 module.exports =  {
     convert: function(timestamp) {
-        console.log(timestamp);
         var now = new Date(),
             then = new Date(timestamp),
             delta = parseInt((now.getTime() - timestamp) / 1000, 10);

@@ -1,5 +1,6 @@
 var $ = require('../vendor/jquery.js');
 var share = require('../modules/share.js');
+var animateStats = require('../modules/animateStats.js');
 var handlebars = require('handlebars');
 var lastUpdated = require('../modules/lastUpdated.js');
 var dayHtml = require('../templates/days.html');
@@ -66,6 +67,7 @@ module.exports =  {
         var compiledHtml = statsTemplate(this.sortData(data.data));
 
         $('.trump-tracker__stats .gs-container').html(compiledHtml);
+        animateStats.init();
     },
 
     addSidebar: function() {
