@@ -1,6 +1,7 @@
 var $ = require('../vendor/jquery.js');
 var share = require('../modules/share.js');
 var handlebars = require('handlebars');
+var lastUpdated = require('../modules/lastUpdated.js');
 var dayHtml = require('../templates/days.html');
 var statsHtml = require('../templates/stats.html');
 
@@ -47,6 +48,7 @@ module.exports =  {
     injectHtml: function() {
         this.addDays();
         this.addStats();
+        this.addSidebar();
     },
 
     addDays: function() {
@@ -64,6 +66,12 @@ module.exports =  {
         var compiledHtml = statsTemplate(this.sortData(data.data));
 
         $('.trump-tracker__stats .gs-container').html(compiledHtml);
+    },
+
+    addSidebar: function() {
+        var sortedData = this.sortData(data.data);
+        var date = lastUpdated.convert(Date.parse(sortedData.lastUpdated));
+        $('.trump-tracker__updated').text('Last Updated ' + date);
     },
 
     sortData: function(data) {

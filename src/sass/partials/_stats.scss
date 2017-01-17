@@ -1,6 +1,15 @@
 .trump-tracker__stats {
     background-color: $c-blue;
     color: $c-white;
+
+    .gs-container {
+        overflow-x: scroll;
+        backface-visibility: hidden;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 }
 
 .trump-tracker__data-points {
@@ -8,6 +17,7 @@
     margin: 0;
     padding: 6px 10px;
     overflow: hidden;
+    min-width: 940px;
 
     @include mq(mobileLandscape) {
         padding: 10px 20px;
@@ -34,27 +44,70 @@
 }
 
 .trump-tracker__data-point--white-house {
-    width: 220px;
+    width: 140px;
+
+    @include mq(leftCol) {
+        width: 220px;
+    }
 
     .trump-tracker__data-white-house {
         position: absolute;
         bottom: -10px;
         right: -20px;
+        width: 160px;
+
+        @include mq(leftCol) {
+            width: 203px;
+        }
     }
 }
 
 .trump-tracker__data-point--tweets {
-    width: 300px;
+    width: 140px;
+
+    @include mq(leftCol) {
+        width: 220px;
+    }
+
+    @include mq(wide) {
+        width: 300px;
+    }
+
+    span {
+        display: none;
+
+        @include mq(leftCol) {
+            display: block;
+            font-family: 'Guardian Sans Web';
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 24px;
+        }
+    }
 
     .trump-tracker__data-phone {
         position: absolute;
         bottom: -10px;
         right: 10px;
+        width: 80px;
+        height: auto;
+
+        @include mq(leftCol) {
+            width: 100px;
+        }
+
+        @include mq(wide) {
+            width: 121px;
+        }
     }
 }
 
 .trump-tracker__data-point--insulted {
-    width: 380px;
+    width: 300px;
+
+    @include mq(wide) {
+        width: 380px;
+    }
 }
 
 .trump-tracker__data-point--wall {
@@ -98,15 +151,23 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    margin-top: 12px;
+
+    @include mq(wide) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
 
 .trump-tracker__data-insulted {
     width: 100px;
-    margin-right: 20px;
+    margin-right: -12px;
     float: left;
+
+    @include mq(wide) {
+        margin-right: 20px;
+    }
 
     img {
         width: 100px;
