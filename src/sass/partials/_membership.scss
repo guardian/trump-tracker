@@ -1,0 +1,19 @@
+.trump-tracker__day--membership {
+    background-color: #f1f1f1;
+    border: none;
+    border-top: 1px solid #fb0;
+
+    .trump-tracker__day-headline {
+        color: $c-black;
+    }
+
+    .trump-tracker__day-link {
+        background-color: #fb0;
+        border-color: #fb0;
+        color: $c-black;
+    }
+
+    .trump-tracker__day-links {
+        margin-bottom: 6px;
+    }
+}

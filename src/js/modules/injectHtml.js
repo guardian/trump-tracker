@@ -6,6 +6,7 @@ var handlebars = require('handlebars');
 var lastUpdated = require('../modules/lastUpdated.js');
 var dayHtml = require('../templates/days.html');
 var statsHtml = require('../templates/stats.html');
+var membershipHtml = require('../templates/membership.html');
 
 var data;
 
@@ -58,6 +59,7 @@ module.exports =  {
         var compiledHtml = dayTemplate({days : data.days.reverse()});
 
         $('.trump-tracker__days').html(compiledHtml);
+        $('.trump-tracker__day:nth-of-type(3)').after(membershipHtml);
 
         share.setDayLinks();
         $('.trump-tracker__loading').addClass('has-loaded');
