@@ -1,6 +1,7 @@
 var $ = require('../vendor/jquery.js');
 var share = require('../modules/share.js');
 var animateStats = require('../modules/animateStats.js');
+var scrollTo = require('../modules/scrollTo.js');
 var handlebars = require('handlebars');
 var lastUpdated = require('../modules/lastUpdated.js');
 var dayHtml = require('../templates/days.html');
@@ -60,6 +61,10 @@ module.exports =  {
 
         share.setDayLinks();
         $('.trump-tracker__loading').addClass('has-loaded');
+
+        setTimeout(function() {
+            scrollTo.init()
+        }, 500);
     },
 
     addStats: function() {
