@@ -65,6 +65,17 @@
     margin-right: 6px;
 }
 
+.trump-tracker__day-caption {
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    line-height: 18px;
+    color: #676767;
+    background-image: url('@@assetPath@@/assets/images/arrow-right.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+}
+
 .trump-tracker__day-share-button {
     display: inline-block;
     margin-right: 2px;
