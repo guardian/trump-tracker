@@ -70,10 +70,12 @@
     font-size: 14px;
     line-height: 18px;
     color: #676767;
-    background-image: url('@@assetPath@@/assets/images/arrow-right.svg');
+    background-image: url('@@assetPath@@/assets/images/information.svg');
     background-position: left center;
     background-repeat: no-repeat;
-    background-size: 18px;
+    background-size: contain;
+    padding-left: 19px;
+    padding-top: 1px;
 }
 
 .trump-tracker__day-share-button {
