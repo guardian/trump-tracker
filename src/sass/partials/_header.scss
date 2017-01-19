@@ -61,11 +61,16 @@
 
     @include mq(desktop) {
         width: 620px;
+        left: 20px;
+    }
+
+    @include mq(leftCol) {
+        left: 180px;
     }
 
     @include mq(wide) {
         bottom: 16px;
-        left: 500px;
+        left: 260px;
     }
 }
 
@@ -78,6 +83,11 @@
     @include mq(mobileLandscape) {
         left: 20px;
         display: block;
+    }
+
+    @include mq(desktop) {
+        left: auto;
+        right: 20px;
     }
 }
 
