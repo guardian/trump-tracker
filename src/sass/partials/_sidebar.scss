@@ -3,16 +3,16 @@
     margin: 12px 0;
     font-family: 'Guardian Text Egyptian Web';
 
-    @include mq(desktop) {
+    @include mq(leftCol) {
         position: absolute;
-        left: -320px;
-        width: 300px;
+        left: -160px;
+        width: 140px;
         margin-top: 0;
     }
 
-    @include mq(leftCol) {
-        left: -480px;
-        width: 460px;
+    @include mq(wide) {
+        left: -240px;
+        width: 220px;
     }
 }
 

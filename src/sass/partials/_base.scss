@@ -20,15 +20,19 @@
 
     @include mq(desktop) {
         padding: 0;
-        margin: 12px 0 12px 340px;
+        margin: 12px 0 12px 20px;
     }
 
     @include mq(leftCol) {
-        margin-left: 500px;
+        margin-left: 180px;
+    }
+
+    @include mq(wide) {
+        margin-left: 260px;
     }
 
     &:before {
-        @include mq(desktop) {
+        @include mq(leftCol) {
             content: '';
             position: absolute;
             left: -11px;
@@ -40,7 +44,7 @@
     }
 
     &:after {
-        @include mq(wide) {
+        @include mq(desktop) {
             content: '';
             position: absolute;
             right: -10px;

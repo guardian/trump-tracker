@@ -7,6 +7,7 @@ var lastUpdated = require('../modules/lastUpdated.js');
 var dayHtml = require('../templates/days.html');
 var statsHtml = require('../templates/stats.html');
 var membershipHtml = require('../templates/membership.html');
+var relatedHtml = require('../templates/related.html');
 
 var data;
 
@@ -52,6 +53,7 @@ module.exports =  {
         this.addDays();
         this.addStats();
         this.addSidebar();
+        this.addRelated();
     },
 
     addDays: function() {
@@ -81,6 +83,13 @@ module.exports =  {
         var sortedData = this.sortData(data.data);
         var date = lastUpdated.convert(Date.parse(sortedData.lastUpdated));
         $('.trump-tracker__updated').text('Last Updated ' + date);
+    },
+
+    addRelated: function() {
+        var relatedTemplate = handlebars.compile(relatedHtml);
+        var compiledHtml = relatedTemplate({related: data.related});
+
+        $('.trump-tracker__related').html(compiledHtml);
     },
 
     sortData: function(data) {
