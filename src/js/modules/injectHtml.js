@@ -77,7 +77,7 @@ module.exports =  {
         var compiledHtml = statsTemplate(this.sortData(data.data));
 
         $('.trump-tracker__stats .gs-container').html(compiledHtml);
-        animateStats.init();
+        // animateStats.init();
     },
 
     addSidebar: function() {

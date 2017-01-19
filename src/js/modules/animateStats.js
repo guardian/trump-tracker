@@ -1,5 +1,5 @@
 var $ = require('../vendor/jquery.js');
-var CountUp = require('countup.js');
+var countUp = require('countup.js');
 
 var options = {
     useEasing: true,
@@ -20,7 +20,7 @@ module.exports =  {
 
     animateNumber: function(id) {
         var number = $('#' + id).text();
-        var countNumber = new CountUp(id, 0, number, 0, 3, options);
+        var countNumber = new countUp(id, 0, number, 0, 3, options);
         countNumber.start();
     }
 };

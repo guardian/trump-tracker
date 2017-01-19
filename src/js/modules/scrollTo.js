@@ -2,7 +2,9 @@ var $ = require('../vendor/jquery.js');
 
 module.exports =  {
     init: function() {
-        this.scrollToDay(this.getTarget());
+        if (this.getTarget()) {
+            this.scrollToDay(this.getTarget());
+        }
     },
 
     scrollToDay: function(target) {
