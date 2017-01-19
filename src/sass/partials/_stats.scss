@@ -105,6 +105,9 @@
 
 .trump-tracker__data-point--insulted {
     width: 300px;
+    padding-right: 0;
+    border-right: 0;
+    margin-right: 0;
 
     @include mq(wide) {
         width: 380px;
@@ -113,9 +116,6 @@
 
 .trump-tracker__data-point--wall {
     width: 140px;
-    padding-right: 0;
-    border-right: 0;
-    margin-right: 0;
 
     .trump-tracker__data-wall {
         position: absolute;

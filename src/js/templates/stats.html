@@ -1,20 +1,8 @@
 <ul class='trump-tracker__data-points'>
-    <li class='trump-tracker__data-point trump-tracker__data-point--insulted'>
-        <h1 class='trump-tracker__data-title'>People, places and things recently&nbsp;insulted</h1>
-        <ul class='trump-tracker__data-insulted-list'>
-            <li class='trump-tracker__data-insulted'>
-                {{{ getImage insulted1Image 140 }}}
-                <span class='trump-tracker__data-insulted-label'>{{ insulted1 }}
-            </li>
-            <li class='trump-tracker__data-insulted'>
-                {{{ getImage insulted2Image 140 }}}
-                <span class='trump-tracker__data-insulted-label'>{{ insulted2 }}
-            </li>
-            <li class='trump-tracker__data-insulted'>
-                {{{ getImage insulted3Image 140 }}}
-                <span class='trump-tracker__data-insulted-label'>{{ insulted3 }}
-            </li>
-        </ul>
+    <li class='trump-tracker__data-point trump-tracker__data-point--wall'>
+        <h1 class='trump-tracker__data-title'>Meters of the wall built</h1>
+        <h2 class='trump-tracker__data-number' id='trump-wall'>{{ metersOfWall }}</h2>
+        <img class='trump-tracker__data-wall' src='{{ assetPath }}/assets/images/sneaky-trump.png' />
     </li>
 
     <li class='trump-tracker__data-point trump-tracker__data-point--obama'>
@@ -35,9 +23,21 @@
         <img class='trump-tracker__data-phone' src='{{ assetPath }}/assets/images/iphone.png' />
     </li>
 
-    <li class='trump-tracker__data-point trump-tracker__data-point--wall'>
-        <h1 class='trump-tracker__data-title'>Meters of the wall built</h1>
-        <h2 class='trump-tracker__data-number' id='trump-wall'>{{ metersOfWall }}</h2>
-        <img class='trump-tracker__data-wall' src='{{ assetPath }}/assets/images/sneaky-trump.png' />
+    <li class='trump-tracker__data-point trump-tracker__data-point--insulted'>
+        <h1 class='trump-tracker__data-title'>People, places and things recently&nbsp;insulted</h1>
+        <ul class='trump-tracker__data-insulted-list'>
+            <li class='trump-tracker__data-insulted'>
+                {{{ getImage insulted1Image 140 }}}
+                <span class='trump-tracker__data-insulted-label'>{{ insulted1 }}
+            </li>
+            <li class='trump-tracker__data-insulted'>
+                {{{ getImage insulted2Image 140 }}}
+                <span class='trump-tracker__data-insulted-label'>{{ insulted2 }}
+            </li>
+            <li class='trump-tracker__data-insulted'>
+                {{{ getImage insulted3Image 140 }}}
+                <span class='trump-tracker__data-insulted-label'>{{ insulted3 }}
+            </li>
+        </ul>
     </li>
 </ul>
