@@ -44,7 +44,7 @@ module.exports =  {
     },
 
     getJson: function() {
-        $.getJSON('https://interactive.guim.co.uk/docsdata-test/1TTV-g36nUE8uxVb882sC2lCeR8Yt8SGjIbJtN12yF0E.json', function(response) {
+        $.getJSON('https://interactive.guim.co.uk/docsdata/1TTV-g36nUE8uxVb882sC2lCeR8Yt8SGjIbJtN12yF0E.json', function(response) {
             data = response.sheets;
             this.injectHtml();
         }.bind(this));
