@@ -48,10 +48,14 @@
             content: '';
             position: absolute;
             right: -10px;
-            top: 0;
+            top: 33px;
             bottom: 0;
             width: 1px;
             background-color: $c-grey;
+        }
+
+        @include mq(leftCol) {
+            top: 0;
         }
     }
 }
