@@ -26,21 +26,14 @@ module.exports =  {
         });
 
         handlebars.registerHelper('getImage', function(url, size) {
-            console.log(url);
-            // https://media.gutools.co.uk/images/f8031f38c8c892ebe716ef3bbf6132127ddb0ce7?crop=0_19_4602_2764
-
+            var crop = url.split('?crop=')[1];
             var url = url.replace('gutools.co.uk', 'guim.co.uk');
                 url = url.replace('http://', 'https://');
-                console.log(url);
-            // https://media.guim.co.uk/images/f8031f38c8c892ebe716ef3bbf6132127ddb0ce7?crop=0_19_4602_2764
                 url = url.replace('images/', '');
-            var crop = url.split('?crop=')[1];
                 url = url.split('?')[0];
-                console.log(url);
                 url = url + '/' + crop + '/' + size + '.jpg';
 
             return '<img class="trump-tracker__day-image" src="' + url + '"/>'
-            // https://media.guim.co.uk/486fc1899aa85cf048fc1a2fe031f4862d2c4bc5/1176_1972_2262_1358/500.jpg
         });
 
         handlebars.registerHelper('assetPath', function() {
