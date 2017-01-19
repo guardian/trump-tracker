@@ -13,10 +13,7 @@
             <div class='trump-tracker__day-copy'>{{ copy }}</div>
 
             {{#if_eq type 'graphic'}}
-                <figure class="element element-interactive interactive" data-interactive="https://interactive.guim.co.uk/embed/iframe-wrapper/0.1/boot.js" data-canonical-url="{{ media }}">
-                    <a href="{{ media }}" data-link-name="in body link" class="u-underline">Interactive</a>
-                </figure>
-    <!--         <iframe class='trump-tracker__day-iframe' src='{{ media }}'></iframe> -->
+                <iframe class='trump-tracker__day-iframe fenced' src='{{ media }}'></iframe>
             {{/if_eq}}
 
             {{#if_eq type 'embed'}}
