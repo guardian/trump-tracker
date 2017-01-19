@@ -19,6 +19,7 @@
     padding: 6px 10px;
     overflow: hidden;
     min-width: 940px;
+    width: calc(100% + 10px);
 
     @include mq(mobileLandscape) {
         padding: 10px 20px;
