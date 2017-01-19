@@ -21,16 +21,12 @@
 }
 
 .trump-tracker__related-header {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.2;
     color: $c-blue;
     font-weight: 900;
     font-family: 'Guardian Egyptian Web';
     margin-bottom: 8px !important;
-
-    @include mq(desktop) {
-        font-size: 20px;
-    }
 }
 
 .trump-tracker__stories {

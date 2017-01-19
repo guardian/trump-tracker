@@ -26,8 +26,8 @@
 }
 
 .trump-tracker-header__standfirst {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 24px;
     font-family: 'Guardian Egyptian Web';
     font-weight: 800;
     color: $c-light-blue;
@@ -35,8 +35,6 @@
 
     @include mq(tablet) {
         max-width: 460px;
-        font-size: 24px;
-        line-height: 28px;
     }
 
     span {

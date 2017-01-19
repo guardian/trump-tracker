@@ -14,11 +14,7 @@
 
 .trump-tracker__day-headline {
     color: $c-blue;
-    font-size: 16px;
-
-    @include mq(tablet) {
-        font-size: 20px;
-    }
+    font-size: 20px;
 }
 
 .trump-tracker__day-image {
