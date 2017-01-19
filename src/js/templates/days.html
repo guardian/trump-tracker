@@ -4,7 +4,7 @@
             <h2 class='trump-tracker__day-headline'>Day {{ day }}</h2>
 
             {{#if_eq type 'image'}}
-                {{{getImage media}}}
+                {{{getImage media 500}}}
                 {{#if caption}}
                     <span class="trump-tracker__day-caption">{{ caption }}</span>
                 {{/if}}
