@@ -59,7 +59,7 @@ module.exports =  {
 
     addDays: function() {
         var dayTemplate = handlebars.compile(dayHtml);
-        var compiledHtml = dayTemplate({days : data.days.reverse()});
+        var compiledHtml = dayTemplate({days: this.cleanDays(data.days)});
 
         $('.trump-tracker__days').html(compiledHtml);
         $('.trump-tracker__day:nth-of-type(3)').after(membershipHtml);
@@ -101,5 +101,15 @@ module.exports =  {
         }
 
         return furniture;
+    },
+
+    cleanDays: function(days) {
+        for (var i = 0; i < days.length; i++) {
+            if (days[i].type === 'embed') {
+                days[i].media = days[i].media.replace('src="//', 'src="http://');
+            }
+        }
+
+        return days.reverse();
     }
 };
