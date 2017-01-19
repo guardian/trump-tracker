@@ -1,7 +1,7 @@
-Guardian Explainers
+100 Days of Trump
 ========================
 
-Want to find out about things? These things will explain other things to you
+What's that Trump guy up to anyway
 
 ## Installation
 

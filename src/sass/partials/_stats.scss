@@ -7,6 +7,10 @@
         backface-visibility: hidden;
         -webkit-overflow-scrolling: touch;
 
+        @include mq(desktop) {
+            overflow-x: hidden;
+        }
+
         &::-webkit-scrollbar {
             display: none;
         }
