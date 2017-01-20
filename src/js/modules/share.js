@@ -1,7 +1,7 @@
 var $ = require('../vendor/jquery.js');
 
 var pageUrl = window.location.href;
-var title = 'The first 100 Days of Trump';
+var title = 'Donald Trump\'s first 100 days as president – daily updates';
 
 module.exports =  {
     init: function() {
