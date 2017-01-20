@@ -106,7 +106,7 @@ module.exports =  {
     cleanDays: function(days) {
         for (var i = 0; i < days.length; i++) {
             if (days[i].type === 'embed') {
-                days[i].media = days[i].media.replace('src="//', 'src="http://');
+                days[i].media = days[i].media.replace('src="//', 'src="https://');
             }
         }
 
