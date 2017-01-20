@@ -49,10 +49,11 @@
     }
 }
 
-.trump-tracker__story-headline {
+a .trump-tracker__story-headline {
     font-family: 'Guardian Egyptian Web';
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
+    color: $c-black;
     -webkit-line-clamp: 4;
 }
