@@ -28,7 +28,6 @@ module.exports =  {
 
         } else {
             return this.getDay(then) + ' ' + then.getDate() + ' ' + this.getMonth(then) + ' ' + then.getFullYear();
-
         }
     },
 
