@@ -1,14 +1,20 @@
 <ul class='trump-tracker__data-points'>
+    <li class='trump-tracker__data-point trump-tracker__data-point--tweets'>
+        <h1 class='trump-tracker__data-title'>Number of tweets <span>@realDonaldTrump & @POTUS</span></h1>
+        <h2 class='trump-tracker__data-number' id='trump-tweets'>{{ numberOfTweets }}</h2>
+        <img class='trump-tracker__data-phone' src='{{ assetPath }}/assets/images/iphone.png' />
+    </li>
+
     <li class='trump-tracker__data-point trump-tracker__data-point--wall'>
         <h1 class='trump-tracker__data-title'>Meters of the wall built</h1>
         <h2 class='trump-tracker__data-number' id='trump-wall'>{{ metersOfWall }}</h2>
         <img class='trump-tracker__data-wall' src='{{ assetPath }}/assets/images/sneaky-trump.png' />
     </li>
 
-    <li class='trump-tracker__data-point trump-tracker__data-point--obama'>
-        <h1 class='trump-tracker__data-title'>Obama actions unpicked</h1>
-        <h2 class='trump-tracker__data-number' id='trump-obama'>{{ obamaActions }}</h2>
-        <img class='trump-tracker__data-sad-obama' src='{{ assetPath }}/assets/images/sad-obama.png' />
+    <li class='trump-tracker__data-point trump-tracker__data-point--resignations'>
+        <h1 class='trump-tracker__data-title'>Number of resignations</h1>
+        <h2 class='trump-tracker__data-number' id='trump-resignations'>{{ numberOfResignations }}</h2>
+        <img class='trump-tracker__data-resignations' src='{{ assetPath }}/assets/images/flynn.png' />
     </li>
 
     <li class='trump-tracker__data-point trump-tracker__data-point--white-house'>
@@ -17,10 +23,10 @@
         <img class='trump-tracker__data-white-house' src='{{ assetPath }}/assets/images/white-house.png' />
     </li>
 
-    <li class='trump-tracker__data-point trump-tracker__data-point--tweets'>
-        <h1 class='trump-tracker__data-title'>Number of tweets <span>@realDonaldTrump & @POTUS</span></h1>
-        <h2 class='trump-tracker__data-number' id='trump-tweets'>{{ numberOfTweets }}</h2>
-        <img class='trump-tracker__data-phone' src='{{ assetPath }}/assets/images/iphone.png' />
+    <li class='trump-tracker__data-point trump-tracker__data-point--obama'>
+        <h1 class='trump-tracker__data-title'>Obama actions unpicked</h1>
+        <h2 class='trump-tracker__data-number' id='trump-obama'>{{ obamaActions }}</h2>
+        <img class='trump-tracker__data-sad-obama' src='{{ assetPath }}/assets/images/sad-obama.png' />
     </li>
 
     <li class='trump-tracker__data-point trump-tracker__data-point--insulted'>

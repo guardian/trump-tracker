@@ -5,6 +5,7 @@ var share = require('../modules/share.js');
 var animateStats = require('../modules/animateStats.js');
 var scrollTo = require('../modules/scrollTo.js');
 var lastUpdated = require('../modules/lastUpdated.js');
+var androidScrollBug = require('../modules/androidScrollBug.js');
 
 var dayHtml = require('../templates/days.html');
 var statsHtml = require('../templates/stats.html');
@@ -77,6 +78,7 @@ module.exports =  {
         var compiledHtml = statsTemplate(this.sortData(data.data));
 
         $('.trump-tracker__stats .gs-container').html(compiledHtml);
+        androidScrollBug.init();
         // animateStats.init();
     },
 
