@@ -1,28 +1,16 @@
-var $ = require('../vendor/jquery.js');
-
 module.exports =  {
     init: function() {
-        this.bindings();
+        if(window.GuardianJSInterface) {
+            this.bindings();
+        }
     },
 
     bindings: function() {
-        $('.trump-tracker__data-points').bind('touchstart', function() {
-            this.onTouchStart();
-        }.bind(this));
-        $('.trump-tracker__data-points').bind('touchend', function() {
-            this.onTouchEnd();
-        }.bind(this));
-    },
-
-    onTouchStart: function() {
-        if(window.GuardianJSInterface) {
+        document.querySelector('.trump-tracker__data-points').addEventListener('touchstart', function() {
             window.GuardianJSInterface.registerRelatedCardsTouch(true);
-        }
-    },
-
-    onTouchEnd: function() {
-        if(window.GuardianJSInterface) {
+        });
+        document.querySelector('.trump-tracker__data-points').addEventListener('touchend', function() {
             window.GuardianJSInterface.registerRelatedCardsTouch(false);
-        }
-    }
+        });
+    },
 };
