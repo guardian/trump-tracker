@@ -4,9 +4,7 @@ var fs = require('fs-extra');
 var cmd = require('node-cmd');
 var deploy = require('./deploy.js');
 var config = require('../scripts/config.json');
-var gridToAssets = require('../scripts/helpers/gridToAssets.js');
 var assets = require('../scripts/helpers/assets.js');
-var screenshot = require('../scripts/helpers/screenshot.js');
 
 var specs =  {
     'deploy': process.argv.slice(2)[0] == 'true' ? true : false,
