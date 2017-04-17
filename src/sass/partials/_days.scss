@@ -10,6 +10,24 @@
     margin-bottom: 12px;
     border: 1px solid $c-red;
     padding: 3px 10px;
+
+    &--end {
+        background-color: $c-red;
+        color: $c-white;
+
+        .trump-tracker__day-headline {
+            color: $c-white;
+        }
+
+        .trump-tracker__day-copy a {
+            color: $c-white;
+            border-bottom: $c-white 1px solid;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 .trump-tracker__day-headline {
@@ -32,6 +50,16 @@
 
     br {
         line-height: 48px;
+    }
+
+    a {
+        color: $c-blue;
+        border-bottom: 1px solid $c-red;
+
+        &:hover {
+            border-bottom-color: $c-blue;
+            text-decoration: none;
+        }
     }
 }
 
@@ -117,4 +145,56 @@
 .trump-tracker__day-share-button--email {
     background-image: url('@@assetPath@@/assets/images/email.svg');
     border-color: $c-dark-grey;
+}
+
+.trump-tracker__end-related {
+    display: flex;
+    margin-top: 24px;
+    width: 100%;
+    padding-bottom: 12px;
+}
+
+.trump-tracker__end-card {
+    position: relative;
+    background-color: lighten($c-grey, 5%);
+
+    &:first-of-type {
+        margin-right: 20px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &:hover {
+        background-color: $c-grey;
+        text-decoration: none;
+
+        img {
+            opacity: 0.9;
+        }
+    }
+}
+
+.trump-tracker__end-text {
+    font-family: 'Guardian Egyptian Web';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $c-black;
+    padding: 4px 4px 12px;
+
+    @include mq(tablet) {
+        font-size: 20px;
+    }
+}
+
+.trump-tracker__end-image {
+    width: 100%;
 }

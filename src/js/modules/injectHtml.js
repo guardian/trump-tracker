@@ -47,6 +47,13 @@ module.exports =  {
     getJson: function() {
         $.getJSON('https://interactive.guim.co.uk/docsdata/1TTV-g36nUE8uxVb882sC2lCeR8Yt8SGjIbJtN12yF0E.json', function(response) {
             data = response.sheets;
+            data.completeDays = 0;
+            for (var i in data.days) {
+                if (data.days[i].copy !== '') {
+                    data.completeDays = parseInt(i) + 1;
+                }
+            }
+            console.log(data);
             this.injectHtml();
         }.bind(this));
     },
@@ -60,7 +67,8 @@ module.exports =  {
 
     addDays: function() {
         var dayTemplate = handlebars.compile(dayHtml);
-        var compiledHtml = dayTemplate({days: this.cleanDays(data.days)});
+        console.log(data.completeDays);
+        var compiledHtml = dayTemplate({days: this.cleanDays(data.days), completeDays: data.completeDays});
 
         $('.trump-tracker__days').html(compiledHtml);
         $('.trump-tracker__day:nth-of-type(3)').after(membershipHtml);

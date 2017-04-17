@@ -1,3 +1,23 @@
+{{#if_eq completeDays 100}}
+    <li class='trump-tracker__day trump-tracker__day--end' id="day-101">
+        <h2 class='trump-tracker__day-headline'>Only 1361 days to go...</h2>
+        <div class='trump-tracker__day-copy'>
+            President Trump has reached 100 days with high-profile missteps on a 'Muslim' travel ban and a failed attempt at health reform. A show of military strength in Syria marked a significant u-turn on his America First foreign policy approach, while installing a conservative Supreme Court judge was first big accomplishment. He spent a lot of time in Florida and on Twitter, but work on his signature border wall has not got started. Read below for all the details and keep checking the Guardian for the latest coverage of <a href='https://www.guardian.com/us'>Trump's presidency</a>.  
+        </div>
+    
+        <div class='trump-tracker__end-related'>
+            <a class='trump-tracker__end-card' href=''>
+                <img class='trump-tracker__end-image' src='https://media.guim.co.uk/44b6c2841b0376970060d90d26f089687a495532/0_153_2622_1573/500.jpg' />
+                <h3 class='trump-tracker__end-text'>We tracked the first 100 days of the Trump presidency. Here’s what we learnt</h3>
+            </a>
+            <a class='trump-tracker__end-card' href=''>
+                <img class='trump-tracker__end-image' src='https://media.guim.co.uk/44b6c2841b0376970060d90d26f089687a495532/0_153_2622_1573/500.jpg' />
+                <h3 class='trump-tracker__end-text'>We tracked the first 100 days of the Trump presidency. Here’s what we learnt</h3>
+            </a>
+        </div>
+    </li>
+{{/if_eq}}
+
 {{#each days}}
     {{#if copy}}
         <li class='trump-tracker__day' id='day-{{ day }}'>
