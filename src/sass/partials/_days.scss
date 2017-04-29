@@ -157,6 +157,7 @@
 .trump-tracker__end-card {
     position: relative;
     background-color: lighten($c-grey, 5%);
+    flex-basis: 50%;
 
     &:first-of-type {
         margin-right: 20px;
